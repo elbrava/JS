@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blowhole</title>
+    <!--fonts-->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .logo {
+            border-radius: 50%;
+        }
+
+        .content_vid_img {
+            display: block;
+            margin: 0 auto;
+            width: 700px;
+            height: 700px;
+            background-color: blanchedalmond;
+            border-radius: 50%;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .talk {
+            width: 120px;
+            height: 120px;
+            padding-top: 1%;
+            background-color: blanchedalmond;
+            border-radius: 50%;
+
+        }
+
+        .image {
+            max-height: 100%;
+            object-position: center;
+            border-radius: 50%;
+        }
+
+        .iframe {
+            width: 90%;
+            height: 90%;
+            border-radius: 50%;
+        }
+
+        .main_show {
+            display: flexbox;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rebeccapurple;
+        }
+
+        .content_main {
+            background: black;
+            display: flex;
+            max-width: 100%;
+            max-height: 100%;
+            justify-content: center;
+            width: auto;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-center">
+            <!-- nav header -->
+            <div class="nav-header">
+                <img src="./Blowhole.jpeg" class="logo" alt="logo" />
+
+            </div>
+            <!-- links -->
+            <ul class="links">
+                <li>
+                    <a href="#home" class="scroll-link">home</a>
+                </li>
+                <li>
+                    <a href="#about" class="scroll-link">about</a>
+                </li>
+                <li>
+                    <a href="#contacts" class="scroll-link">contacts</a>
+                </li>
+                <li>
+                    <a href="signin.html">Sign in</a>
+                </li>
+            </ul>
+            <!-- social media -->
+            <ul class="social-icons">
+                <li>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="banner">
+        <div class="main_show">
+            <div class="content_main">
+                <img  class="image" src="blowhole.jpeg" alt="">
+            </div>
+        </div>
+            <div class="container">
+                <h1>Home</h1>
+                <div class="content_vid_img">
+                    <!--<img  class="image" src="blowhole.jpeg" alt="">
+                    
+                    -->
+                    <iframe class="iframe" width="560" height="315"
+                        src="https://www.youtube-nocookie.com/embed/9YffrCViTVk" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                </div>
+                <div class="talk">
+                    TALK TO PHYSCOLOGIST
+                </div>
+                <!-- about -->
+                <section id="about" class="section">
+                    <div class="title">
+                        <h2>About <span>us</span></h2>
+                        Only for the few
+                    </div>
+                </section>
+                <!-- services -->
+                <section id="contacts" class="section">
+                    <div class="title">
+                        <h2>Get in <span>touch</span></h2>
+                        Telephone +254762183303
+                    </div>
+                </section>
+
+
+
+                <!-- footer -->
+                <footer class="section">
+                    <p>
+                        copyright &copy; blowhole company
+                        <span id="date"></span>. all rights reserved
+                    </p>
+                </footer>
+                <a class="scroll-link top-link" href="#home">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+            <!-- javascript -->
+            <script src="script.js"></script>
+            <script>
+
+                document.querySelector(".talk").addEventListener("click", function () {
+                    d = document.querySelector(".content_vid_img")
+                    x = document.querySelector(".talk")
+                    x.style.width = "700px"
+                    x.style.height = "700px"
+                    d.style.width = "200px"
+                    d.style.height = "200px"
+
+
+                })
+
+                document.querySelector(".content_vid_img").addEventListener("click", function () {
+                    d = document.querySelector(".talk")
+                    alert("clicked")
+                    d.style.width = "120px"
+                    d.style.height = "120px"
+                    document.querySelector(".content_vid_img")
+                    x.style.width = "700px"
+                    x.style.height = "700px"
+
+
+                })
+
+
+
+
+            </script>
+</body>
+
+</html>
